@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StoryMaker: Interactive Story Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+<style>
+      .page-container {
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      }
+      .page-transition-out {
+        animation: slide-out 0.5s forwards ease-in-out;
+      }
+      .page-transition-in {
+        animation: slide-in 0.5s forwards ease-in-out;
+      }
+
+      @keyframes slide-out {
+        from {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+      }
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+</head>
+  <body class="bg-slate-900 text-white">
+    <div id="root"></div>
+  </body>
+</html>
